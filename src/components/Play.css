@@ -1,0 +1,107 @@
+
+#play {
+  min-height: 100vh;
+  margin-top: -8vw;
+  padding-top: 10vh;
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+  background: linear-gradient(-45deg, #ff0066, #00ffe7, #3b00ff, #ffa600);
+  background-size: 400% 400%;
+  animation: neonflow 20s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown {
+  font-size: 4em;
+  color: red;
+  margin: 20px 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* From Uiverse.io by nima-mollazadeh */
+.donate {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 1.25em;
+  cursor: pointer;
+  min-width: 50vw;
+  min-height: 10vh;
+  font-size: 2em;
+  border: none;
+  font-family: inherit;
+}
+
+.donate span {
+  position: relative;
+  z-index: 1;
+}
+
+.donate::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #272727;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.donate:hover::before {
+  opacity: 0.7;
+}
+
+.donate::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.donate:hover:after {
+  opacity: 1;
+}
+
+/* Mobile responsive Play section */
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+  
+  .countdown {
+    font-size: 2.5em;
+  }
+  
+  .donate {
+    min-width: 80vw;
+    min-height: 8vh;
+    font-size: 1.5em;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 1.5rem;
+  }
+  
+  .countdown {
+    font-size: 1.8em;
+  }
+  
+  .donate {
+    min-width: 90vw;
+    min-height: 7vh;
+    font-size: 1.2em;
+    padding: 10px 15px;
+  }
+}

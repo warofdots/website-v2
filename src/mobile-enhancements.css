@@ -1,0 +1,179 @@
+/* Additional mobile enhancements */
+
+/* Ensure smooth scrolling on mobile devices */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent horizontal scroll on mobile */
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+  /* Make buttons and links more touch-friendly */
+  .cta-button,
+  .donate,
+  #header ul li a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improve text readability on mobile */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Optimize images for mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Better spacing for mobile */
+  .section {
+    padding: 50px 15px 30px;
+  }
+  
+  /* Mobile navigation improvements */
+  #header {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  /* Mobile video container improvements */
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  
+  .yt-embed {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  
+  /* Mobile typography improvements */
+  h1, h2, h3 {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Mobile button improvements */
+  .donate {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Mobile scroll snap for better UX */
+  .App {
+    scroll-snap-type: y mandatory;
+  }
+  
+  .section {
+    scroll-snap-align: start;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  /* Further reduce font sizes */
+  .title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  
+  /* Smaller buttons for very small screens */
+  .cta-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+  /* Tighter spacing */
+  .container {
+    padding: 20px 10px;
+  }
+  
+  /* Smaller countdown */
+  .countdown {
+    font-size: 1.5em;
+    word-break: break-all;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Reduce section heights in landscape mode */
+  .section {
+    min-height: 60vh;
+    padding: 30px 15px 20px;
+  }
+  
+  #home {
+    min-height: 70vh;
+  }
+  
+  .title {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+  
+  #header {
+    height: 60px;
+  }
+  
+  #header ul li a {
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  
+  #header ul li img {
+    height: 50px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper images on retina displays */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  /* Ensure text remains readable in dark mode */
+  .white-section {
+    background: #f8f9fa;
+    color: #333;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .fade-bg {
+    transition: none;
+  }
+  
+  .yt-wrapper {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
