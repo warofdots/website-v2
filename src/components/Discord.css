@@ -1,12 +1,16 @@
+
 .discord-section {
-  padding: 60px 0;
-  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
-  margin-top: -10vh;
-  padding-top: 15vh;
   min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  margin-top: -8vw;
+  padding: 60px 0 0 0;
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
   background: linear-gradient(-45deg, #ff0066, #00ffe7, #3b00ff, #ffa600);
-  background-size: 400% 400%;
+  background-size: 200% 200%;
   animation: neonflow 20s ease infinite;
+  position: relative;
+  overflow: hidden;
 }
 
 .discord-content {

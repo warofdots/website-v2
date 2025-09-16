@@ -4,9 +4,7 @@
   margin-top: -8vw;
   padding-top: 10vh;
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
-  background: linear-gradient(-45deg, #ff0066, #00ffe7, #3b00ff, #ffa600);
-  background-size: 400% 400%;
-  animation: neonflow 20s ease infinite;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
