@@ -4,8 +4,8 @@
   min-height: 135vh;
   margin-top: -8vw;
   padding-top: 10vh;
-  /* reversed slant */
-  clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%);
+  /* top diagonal only, bottom flat */
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
   background: #fff;
   display: flex;
   flex-direction: column;
