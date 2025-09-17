@@ -49,7 +49,8 @@ body {
 
 
 .section {
-  min-height: 100vh;
+  /* increased height by ~35% */
+  min-height: 135vh;
   width: 100vw;
   max-width: 100vw;
   display: flex;
@@ -85,7 +86,8 @@ body {
   
   .section {
     padding: 60px 15px 30px;
-    min-height: 80vh;
+    /* increased mobile min-height by ~35% */
+    min-height: 108vh;
   }
   
   .container {
@@ -96,7 +98,8 @@ body {
 @media (max-width: 480px) {
   .section {
     padding: 50px 10px 25px;
-    min-height: 70vh;
+    /* increased small-mobile min-height by ~35% */
+    min-height: 95vh;
   }
   
   .container {

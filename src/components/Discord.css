@@ -1,6 +1,7 @@
 
 .discord-section {
-  min-height: 100vh;
+  /* increased by ~35% */
+  min-height: 135vh;
   width: 100vw;
   box-sizing: border-box;
   margin-top: -8vw;

@@ -6,10 +6,11 @@
   background-size: 400% 400%;
   animation: neonflow 20s ease infinite;
   margin-top: -10vh;
-  padding-top: 15vh;
+  padding-top: 20vh;
   /* reversed slant */
   clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%);
-  min-height: 100vh;
+  /* increased by ~35% */
+  min-height: 135vh;
 }
 
 /* Background image slider container sits behind content */
@@ -67,8 +68,8 @@
 
 .video-container {
   overflow: hidden;
-  width: 800px;
-  height: 450px;
+  width: 1080px;
+  height: 607px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }

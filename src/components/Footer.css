@@ -7,7 +7,8 @@ footer {
   margin-top: 0;
   padding-top: 0;
   padding: 30px 30px;
-  min-height: 100px;
+  /* slightly larger footer */
+  min-height: 135px;
 }
 
 footer ul {

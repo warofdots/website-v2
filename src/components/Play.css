@@ -1,6 +1,7 @@
 
 #play {
-  min-height: 100vh;
+  /* increased by ~35% */
+  min-height: 135vh;
   margin-top: -8vw;
   padding-top: 10vh;
   /* reversed slant */
