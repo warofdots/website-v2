@@ -5,8 +5,8 @@
   box-sizing: border-box;
   margin-top: -8vw;
   padding: 60px 0 0 0;
-  /* top diagonal only, bottom flat */
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 0);
+  /* top diagonal only, bottom full-width (fix wedge) */
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
   /* fallback background (kept) */
   background: linear-gradient(-45deg, #ff0066, #00ffe7, #3b00ff, #ffa600);
   background-size: 200% 200%;
@@ -15,9 +15,9 @@
   /* raise z-index so the section (and its ::after overlap) sit above the footer */
   z-index: 2; /* create stacking context so pseudo element sits behind */
   /* extend downward and overlap the footer to hide any wedge */
-  padding-bottom: 10vh;
-  margin-bottom: -10vh;
-  overflow: hidden;
+  padding-bottom: 20vh;
+  margin-bottom: -20vh;
+  overflow: visible;
 }
 
 /* Robust background layer to guarantee visibility behind children */
@@ -26,7 +26,7 @@
   position: absolute;
   inset: 0;
   /* sit behind the section content but above page background */
-  z-index: 1;
+  z-index: 0;
   background: linear-gradient(-45deg, #ff0066, #00ffe7, #3b00ff, #ffa600);
   background-size: 200% 200%;
   animation: neonflow 20s ease infinite;
