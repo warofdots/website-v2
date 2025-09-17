@@ -48,7 +48,7 @@ const YouTube = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setBgIndex((i) => (i + 1) % images.length);
-    }, 4000); // change every 4s
+    }, 6000); // change every 6s
 
     return () => clearInterval(id);
   }, []);
