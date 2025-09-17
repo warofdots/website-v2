@@ -1,6 +1,7 @@
 #home {
   min-height: 100vh;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  /* reversed slant */
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
   margin-top: 0;
   position: relative;
   display: flex;
