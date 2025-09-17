@@ -1,6 +1,7 @@
 .background2 {
   position: relative;
   z-index: 0;
+  /* keep the neon gradient as a fallback/base */
   background: linear-gradient(-45deg, #ff0066, #00ffe7, #3b00ff, #ffa600);
   background-size: 400% 400%;
   animation: neonflow 20s ease infinite;
@@ -8,6 +9,29 @@
   padding-top: 15vh;
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
   min-height: 100vh;
+}
+
+/* Background image slider container sits behind content */
+.background2 .bg-slider {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background2 .bg-image {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  filter: saturate(1.05) contrast(1);
+}
+
+.background2 .bg-image.visible {
+  opacity: 1;
 }
 
 @keyframes neonflow {

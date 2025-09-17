@@ -1,11 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 import './YouTube.css';
 
+// image paths (public/ folder) - module scope so hooks don't need to include this in deps
+const images = [
+  '/image1.png',
+  '/image2.png',
+  '/image3.png',
+  '/image4.png',
+  '/image5.png',
+  '/image6.png',
+  '/image7.png',
+];
+
 const YouTube = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ytWrapperRef = useRef(null);
 
   useEffect(() => {
+    const node = ytWrapperRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -13,26 +25,47 @@ const YouTube = () => {
             setTimeout(() => {
               setIsVisible(true);
             }, 100);
-            observer.unobserve(ytWrapperRef.current);
+            if (node) observer.unobserve(node);
           }
         });
       },
       { threshold: 0.5 }
     );
 
-    if (ytWrapperRef.current) {
-      observer.observe(ytWrapperRef.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (ytWrapperRef.current) {
-        observer.unobserve(ytWrapperRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, []);
 
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setBgIndex((i) => (i + 1) % images.length);
+    }, 4000); // change every 4s
+
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div id="youtube" className="section background2">
+      {/* background slider layers */}
+      <div className="bg-slider" aria-hidden>
+        {images.map((src, i) => (
+          <div
+            key={src}
+            className={`bg-image ${i === bgIndex ? 'visible' : ''}`}
+            style={{ backgroundImage: `url(${src})` }}
+          />
+        ))}
+      </div>
+
       <div className="container">
         <div className="youtube-content">
           <div 
