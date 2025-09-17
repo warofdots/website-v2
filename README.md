@@ -1,3 +1,4 @@
+## This README is AI generated because yes.
 # War of Dots - React + Vite
 
 A modern React conversion of the War of Dots website, built with Vite for optimal performance and developer experience.
