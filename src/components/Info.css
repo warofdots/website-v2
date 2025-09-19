@@ -1,4 +1,3 @@
-
 .section {
   /* increased by ~35% */
   min-height: 135vh;
@@ -8,16 +7,15 @@
   align-items: center;
   padding: 80px 20px 40px;
   position: relative;
-  /* flat bottom edge to remove wedge */
-  clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%);
+  /* reversed slant */
+  clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%);
 }
-
 
 .white-section {
   background: #ffffff;
   color: #000000;
-  /* flat bottom edge to remove wedge */
-  clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%);
+  /* reversed slant */
+  clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%);
   /* increased by ~35% */
   min-height: 135vh;
   margin-top: -10vh;
