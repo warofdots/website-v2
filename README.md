@@ -3,7 +3,7 @@
 
 A modern React conversion of the War of Dots website, built with Vite for optimal performance and developer experience.
 
-## 🚀 Features
+## 🚀 Features 
 
 - **React Components**: Modular component architecture for better maintainability
 - **Mobile-First Design**: Enhanced mobile responsiveness while preserving desktop UI
