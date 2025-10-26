@@ -4,10 +4,10 @@ import './Play.css';
 const Play = () => {
   const [timeLeft, setTimeLeft] = useState('');
 
+  // this fix is made by thalanas110 
   useEffect(() => {
-    // Set a target date - you can modify this to your actual release date
-    const targetDate = new Date();
-    targetDate.setMonth(targetDate.getMonth() + 3); // 3 months from now, adjust as needed
+    // Set a fixed target date for March 20, 2026. To change, change the date in YYYY-MM-DD format.
+    const targetDate = new Date('2026-03-20T00:00:00');
 
     const updateCountdown = () => {
       const now = new Date().getTime();
