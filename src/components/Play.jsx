@@ -8,7 +8,7 @@ const Play = () => {
     // Set a target date - you can modify this to your actual release date
     // const targetDate = new Date();
     // targetDate.setMonth(targetDate.getMonth() + 3); // 3 months from now, adjust as needed
-    const targetDate = new Date('2026-03-20T00:00:00');
+    const targetDate = new Date(2026, 2, 20);
 
     const updateCountdown = () => {
       const now = new Date().getTime();
