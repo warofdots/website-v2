@@ -6,7 +6,7 @@ const Play = () => {
 
   useEffect(() => {
     // Set a target date - you can modify this to your actual release date
-    const targetDate = new Date(2026, 2, 20);
+    const targetDate1 = new Date(2026, 2, 20);
     const targetDate = new Date();
     targetDate.setMonth(targetDate.getMonth() + 3); // 3 months from now, adjust as needed
 
